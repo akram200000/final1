@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="menu-btn">
+            <span class="hamburger"></span>
+        </div>
+        <h1>Dashboard</h1>
+    </div>
+    <div class="sidebar">
+        <div class="menu">
+            <a class="menu-item" href="#">Overview</a>
+            <a class="menu-item" href="#">Analytics</a>
+            <a class="menu-item" href="#">Sales</a>
+            <a class="menu-item" href="#">Settings</a>
+        </div>
+    </div>
+    <div class="main-content">
+        <h2>Welcome Back!</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Income This Month</h3>
+                <p id="income">$0</p>
+            </div>
+            <div class="card">
+                <h3>Cars Sold This Month</h3>
+                <p id="cars-sold">0</p>
+            </div>
+            <div class="card full-width">
+                <h3>Sales Graph</h3>
+                <canvas id="salesGraph"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

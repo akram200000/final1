@@ -1,0 +1,102 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #E0E0E0;
+    background-color: #0A0A0A;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background: #161616;
+    padding: 10px 20px;
+    color: #FFF;
+}
+
+.menu-btn {
+    cursor: pointer;
+    padding: 18px 10px;
+}
+
+.hamburger, .hamburger::before, .hamburger::after {
+    display: block;
+    background: #E0E0E0;
+    height: 2px;
+    width: 25px;
+    border-radius: 2px;
+    position: relative;
+}
+
+.hamburger::before, .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.hamburger::before {
+    top: -7px;
+}
+
+.hamburger::after {
+    top: 7px;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #0A0A0A;
+    padding: 20px;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: -500px;
+    transition: left 0.3s;
+    z-index: 1000; /* Keeps sidebar above other content */
+}
+
+.main-content {
+    padding: 20px;
+    transition: margin-left 0.3s;
+    width: calc(100% - 20px); /* Ensures full width of the screen is used */
+}
+
+
+.menu-item {
+    display: block;
+    color: #CCCCCC;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600; /* Increase font-weight */
+    margin: 10px 0;
+    transition: color 0.3s;
+}
+
+.menu-item:hover {
+    color: #F0F0F0;
+}
+
+.card {
+    background: linear-gradient(145deg, #161616, #0A0A0A);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+h1, h2, h3 {
+    color: #F0F0F0;
+    font-weight: 700; /* Stronger headers */
+}
